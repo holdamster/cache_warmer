@@ -9,7 +9,7 @@ Usage:
 Page load times are taken from curl command which is run to keep the cache warm.
 
 Example stats generated for each URL listed in sitemap.xml file (saved in tmp files) below. These are pushed into the database created to store the data.
-
+        
 HTTPS://WEBSITE_ADDRESS
 
     time_namelookup:  0.004
@@ -20,7 +20,7 @@ HTTPS://WEBSITE_ADDRESS
  time_starttransfer:  0.516
                     ----------
          time_total:  0.536
-
+        
 
 
 MariaDB [(none)]> create database stats;
