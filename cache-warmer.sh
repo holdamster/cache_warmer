@@ -23,7 +23,7 @@ cat "$1" | while read line; do
 	echo -e "$line\n" >> /root/cache-warmer/tmp/$NUMBER
 	curl -A "$USERAGENT" -so /dev/null -w "@/root/cache-warmer/curl-format.txt" $line >> /root/cache-warmer/tmp/$NUMBER
 
-	ADDRESS=`grep -i anetarzodeczko.pl /root/cache-warmer/tmp/$NUMBER`
+	ADDRESS=`grep -i <YOUR_DOMAIN_NAME> /root/cache-warmer/tmp/$NUMBER`
 	TIME_NAMELOOKUP=`grep -i time_namelookup /root/cache-warmer/tmp/$NUMBER | awk '{print $2}'`
 	TIME_CONNECT=`grep -i time_connect /root/cache-warmer/tmp/$NUMBER	| awk '{print $2}'`
 	TIME_APPCONNECT=`grep -i time_appconnect /root/cache-warmer/tmp/$NUMBER	| awk '{print $2}'`
