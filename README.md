@@ -45,3 +45,17 @@ MariaDB [stats]> CREATE TABLE `table_name` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1322 DEFAULT CHARSET=utf8
 ```
+
+
+
+Before using the script, create the sitemap.xml file with one URL per line.
+
+Change the paths if you upload it to different directory than /root/cache-warmer/.
+
+Insert your website name in:
+```
+	ADDRESS=`grep -i <YOUR_DOMAIN_NAME> /root/cache-warmer/tmp/$NUMBER`
+
+```
+
+And change the table name created to desired one.
