@@ -12,14 +12,14 @@ Example stats generated for each URL listed in sitemap.xml file (saved in tmp fi
         
 HTTPS://WEBSITE_ADDRESS
 
-    time_namelookup:  0.004
-       time_connect:  0.014
-    time_appconnect:  0.174
-   time_pretransfer:  0.174
-      time_redirect:  0.000
- time_starttransfer:  0.516
-                    ----------
-         time_total:  0.536
+time_namelookup:  0.004
+time_connect:  0.014
+time_appconnect:  0.174
+time_pretransfer:  0.174
+time_redirect:  0.000
+time_starttransfer:  0.516
+               ----------
+time_total:  0.536
         
 
 
