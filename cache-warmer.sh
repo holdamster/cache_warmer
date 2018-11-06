@@ -15,13 +15,9 @@ if [ ! -f "$1" ]; then
     exit 1
 fi
 
-#cat "$1" | perl -ne 'while (/>(http.+?)</g) { print "$1\n"; }' | while read line; do 
-
 cat "$1" | while read line; do
 	LICZBA=$RANDOM
 	TIMESTAMP=`date +%Y-%m-%d_%H:%M:%S:%N`
-
-#curl -so /dev/null -w "%{time_connect} - %{time_starttransfer} - %{time_total}  " $line
 
 	echo -e "$line\n" >> /root/cache-warmer/tmp/$LICZBA
 	curl -A "$USERAGENT" -so /dev/null -w "@/root/cache-warmer/curl-format.txt" $line >> /root/cache-warmup/tmp/$LICZBA
