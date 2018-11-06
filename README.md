@@ -57,13 +57,13 @@ Before using the script, create the sitemap.xml file with one URL per line.
 
 Change the paths if you upload it to different directory than /root/cache-warmer/.
 
-Insert your website name in:
+Insert your domain name in:
 ```
 	ADDRESS=`grep -i <YOUR_DOMAIN_NAME> /root/cache-warmer/tmp/$NUMBER`
 
 ```
 
-And change the table name created to desired one.
+And change the table name to the name chosen while creating the table.
 
 Add a cron to run the script automatically:
 ```
