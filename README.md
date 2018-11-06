@@ -43,7 +43,12 @@ MariaDB [stats]> CREATE TABLE `table_name` (
   `time_starttransfer` varchar(255) DEFAULT NULL,
   `time_total` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1322 DEFAULT CHARSET=utf8
+) ENGINE=InnoDB AUTO_INCREMENT=1322 DEFAULT CHARSET=utf8;
+
+Query OK, 0 rows affected (0.067 sec)
+
+MariaDB [stats]> 
+
 ```
 
 
