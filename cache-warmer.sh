@@ -17,8 +17,8 @@ if [ ! -f "$1" ]; then
 fi
 
 cat "$1" | while read line; do
-	NUMBER=$RANDOM
-	TIMESTAMP=`date +%Y-%m-%d_%H:%M:%S:%N`
+	NUMBER2=$RANDOM
+	NUMBER=`date +%Y-%m-%d_%H:%M:%S:%N`
 
 	echo -e "$line\n" >> /root/cache-warmer/tmp/$NUMBER
 	curl -A "$USERAGENT" -so /dev/null -w "@/root/cache-warmer/curl-format.txt" $line >> /root/cache-warmer/tmp/$NUMBER
