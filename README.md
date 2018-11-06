@@ -65,7 +65,7 @@ Insert your domain name in:
 
 And change the table name to the name chosen while creating the table.
 
-Add a cron to run the script automatically:
+Add a cron job to run the script automatically:
 ```
 * * * * * /usr/bin/bash /root/cache-warmer/cache-warmer.sh "/root/cache-warmer/sitemap.xml" > /dev/null
 ```
