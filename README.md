@@ -1,11 +1,12 @@
 # cache_warmer
 Website cache warmer with page load times pushed to MySQL database.
 
+Usage:
+./cache-warmer.sh sitemap.xml
 
 MariaDB [(none)]> create database stats;
-
-
-MariaDB [(none)]> CREATE TABLE `table_name` (
+MariaDB [(none)]> use stats;
+MariaDB [stats]> CREATE TABLE `table_name` (
   `address` varchar(255) NOT NULL,
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `timestamp` datetime DEFAULT current_timestamp(),
