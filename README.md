@@ -7,7 +7,9 @@ Usage:
 
 
 MariaDB [(none)]> create database stats;
+
 MariaDB [(none)]> use stats;
+
 MariaDB [stats]> CREATE TABLE `table_name` (
   `address` varchar(255) NOT NULL,
   `id` int(11) NOT NULL AUTO_INCREMENT,
