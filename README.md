@@ -2,7 +2,9 @@
 Website cache warmer with page load times pushed to MySQL database.
 
 Usage:
+
 ./cache-warmer.sh sitemap.xml
+
 
 MariaDB [(none)]> create database stats;
 MariaDB [(none)]> use stats;
