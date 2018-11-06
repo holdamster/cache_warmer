@@ -1,5 +1,5 @@
 # cache_warmer
-## Website cache warmer with page load times pushed to MySQL database.
+### Website cache warmer with page load times pushed to MySQL database.
 
 Usage:
 ```
@@ -64,3 +64,8 @@ Insert your website name in:
 ```
 
 And change the table name created to desired one.
+
+Add a cron to run the script automatically:
+```
+* * * * * /usr/bin/bash /root/cache-warmer/cache-warmer.sh "/root/cache-warmer/sitemap.xml" > /dev/null
+```
