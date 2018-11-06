@@ -1,9 +1,7 @@
 MariaDB [(none)]> 
 MariaDB [(none)]> create database stats;
-
-
-MariaDB [(none)]> 
-MariaDB [(none)]> CREATE TABLE `gabinet` (
+MariaDB [(none)]> use stats;
+MariaDB [stats]> CREATE TABLE `table_name` (
   `address` varchar(255) NOT NULL,
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `timestamp` datetime DEFAULT current_timestamp(),
@@ -16,3 +14,4 @@ MariaDB [(none)]> CREATE TABLE `gabinet` (
   `time_total` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1322 DEFAULT CHARSET=utf8
+MariaDB [stats]> 
