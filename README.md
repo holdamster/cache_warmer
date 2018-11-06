@@ -1,28 +1,32 @@
 # cache_warmer
-Website cache warmer with page load times pushed to MySQL database.
+## Website cache warmer with page load times pushed to MySQL database.
 
 Usage:
-
+```
 ./cache-warmer.sh sitemap.xml
-
+```
 
 Page load times are taken from curl command which is run to keep the cache warm.
 
 Example stats generated for each URL listed in sitemap.xml file (saved in tmp files) below. These are pushed into the database created to store the data.
-        
+
+```
 HTTPS://WEBSITE_ADDRESS
 
-time_namelookup:  0.004
-time_connect:  0.014
-time_appconnect:  0.174
-time_pretransfer:  0.174
-time_redirect:  0.000
-time_starttransfer:  0.516
-               ----------
-time_total:  0.536
-        
+    time_namelookup:  0.004
+       time_connect:  0.014
+    time_appconnect:  0.174
+   time_pretransfer:  0.174
+      time_redirect:  0.000
+ time_starttransfer:  0.516
+                    ----------
+         time_total:  0.536
 
+```     
 
+Creating the database and table (replace table_name with your desired name. Also swap it in the script.)
+
+```
 MariaDB [(none)]> create database stats;
 
 MariaDB [(none)]> use stats;
@@ -40,3 +44,4 @@ MariaDB [stats]> CREATE TABLE `table_name` (
   `time_total` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1322 DEFAULT CHARSET=utf8
+```
